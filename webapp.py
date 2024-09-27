@@ -29,10 +29,10 @@ def render_response():
     #The information in args is visible in the url for the page being requested. ex. .../response?color=blue
     if distance == '100m' or distance == '100 meters':
         n = int(request.args['secounds'])
-        secounds * 2 - 0.2
-        secounds * 2 + 0.2
+        min = n * 2 - 0.2
+        max = n * 2 + 0.2
     elif distance == '200m' or '200 meters':
         n = int(request.args['secounds'])
-        secounds * 2 * 1.07
+        time = n * 2 * 1.07
 if __name__=="__main__":
     app.run(debug=False)

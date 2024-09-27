@@ -16,3 +16,23 @@ def render_page2():
     
 if __name__=="__main__":
     app.run(debug=False)
+    
+@app.route("/")
+def render_main():
+    return render_template('home.html')
+
+@app.route("/response")
+def render_response():
+    distance = request.args['meters'] 
+    #The request object stores information about the request sent to the server.
+    #args is an ImmutableMultiDict (like a dictionary but can have mutliple values for the same key and can't be changed)
+    #The information in args is visible in the url for the page being requested. ex. .../response?color=blue
+    if distance == '100m' or distance == '100 meters':
+        n = int(request.args['secounds'])
+        secounds * 2 - 0.2
+        secounds * 2 + 0.2
+    elif distance == '200m' or '200 meters':
+        n = int(request.args['secounds'])
+        secounds * 2 * 1.07
+if __name__=="__main__":
+    app.run(debug=False)

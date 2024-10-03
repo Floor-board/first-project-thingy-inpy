@@ -6,8 +6,8 @@
 
 {% block content %}
     <!--page content-->
-    <h1>Home Page</h1>
-    <form>
+    <h1>Track time over diffrent distance calcualtor</h1>
+    <form action = "/response">
       <div class="input-group">
         <span class="input-group-text">Distance</span>
         <input type="text" class="form-control" placeholder="100m" name="meters">
@@ -19,4 +19,6 @@
       </div>
       <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>
+	
+	<p>This is your time you would get but if you were running double the distance!: {{New_Time}}</p>
 {% endblock %}

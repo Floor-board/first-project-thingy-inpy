@@ -9,3 +9,8 @@ body{
 form{
 	background:pink;
 }
+
+#padding-border{
+	margin:20px;
+	border-style:dotted;
+}

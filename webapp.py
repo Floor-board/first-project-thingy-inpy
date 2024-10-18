@@ -21,18 +21,18 @@ def render_response():
     #The request object stores information about the request sent to the server.
     #args is an ImmutableMultiDict (like a dictionary but can have mutliple values for the same key and can't be changed)
     #The information in args is visible in the url for the page being requested. ex. .../response?color=blue
-    if distance == '100m' or distance == '100 meters':
+    if distance == '100m' or distance == '100 meters' or distance == '100':
         n = float(request.args['secounds'])
         min = n * 2 - 0.2
         max = n * 2 + 0.2
         rt = [min, max]
         RandomRt = random.choice(rt)
         print(RandomRt)
-    elif distance == '200m' or '200 meters':
+    elif distance == '200m' or distance == '200 meters' or distance == '200':
         n = float(request.args['secounds'])
         time = n * 2 + 4
         rt = time
-    elif distance == '400m' or '400 meters':
+    elif distance == '400m' or  distance == '400 meters' or distance == '400':
         n = float(request.args['secounds'])
         time = n * 2 + random.choice(seven_ten)
         rt = time
@@ -40,7 +40,9 @@ def render_response():
         n = float(request.args['secounds'])
         time = n * 2 + random.choice(seven_ten)
         rt = time
+    elif distance == '1500' or distance == 'mile' or distance == '1500m' or distance == '1500 meters' or distance == 'one mile':
+        n = float(request.args['secounds'])
+        time = n * 
     return render_template('index.html', New_Time = rt)
-
 if __name__=="__main__":
     app.run(debug=False)

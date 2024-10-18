@@ -42,7 +42,10 @@ def render_response():
         rt = time
     elif distance == '1500' or distance == 'mile' or distance == '1500m' or distance == '1500 meters' or distance == 'one mile':
         n = float(request.args['secounds'])
-        time = n * 
+        time = n * 60
+        t2 = n * (2/1)**1.06
+         two_mile_time = t2 / 60
+        rt = two_mile_time
     return render_template('index.html', New_Time = rt)
 if __name__=="__main__":
     app.run(debug=False)
